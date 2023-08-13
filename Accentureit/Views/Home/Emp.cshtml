@@ -1,0 +1,39 @@
+﻿
+@using BOL;
+
+
+<div class="text-center">
+    <h1 class="display-4">List Of Employees</h1>
+    <p>#Unity Is Strength !</p>
+</div>
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Employee Name</th>
+                <th scope="col">Employee email</th>
+                <th scope="col">Employee password</th>
+                <th scope="col">Employee Department</th>
+                <th scope="col">Employee joindate</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            @{
+              Emp E = (BOL.Emp) ViewData["emp"] ;
+        
+                    <tr>
+                        <td>@E.eid</td>
+                        <td>@E.name</td>
+                        <td>@E.email</td>
+                        <td>@E.psw</td>
+                        <td>@E.department</td>
+                        <td>@E.date</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+    <div />
